@@ -1,0 +1,26 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+            <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/bet</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+
+
+        <property name="connection_pool_size">1</property>
+
+        <property name="hibernate.show_sql">false</property>
+
+        <mapping class="org.example.model.User" />
+        <mapping class="org.example.model.Horse" />
+        <mapping class="org.example.model.Bet" />
+
+
+    </session-factory>
+</hibernate-configuration>
